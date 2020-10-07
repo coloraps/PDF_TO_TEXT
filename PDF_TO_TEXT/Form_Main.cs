@@ -25,6 +25,8 @@ namespace PDF_TO_TEXT
         private Timer timer = new Timer();
         private string inputPDF;
         private string outputTxt;
+        
+        
         private string Convert_PDFtoText(string path)
         {
             PDDocument doc = PDDocument.load(path);
@@ -60,7 +62,7 @@ namespace PDF_TO_TEXT
                 timer.Enabled = true;
                 timer.Enabled = false;
                 timer_wait();
-            }catch(Exception ex)
+            }catch
             {
                 lab_info.Text = "ERROR";
             }
